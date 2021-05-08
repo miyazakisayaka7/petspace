@@ -23,7 +23,6 @@
 | medicine           | text             | null: false                      |
 | allergies          | text             | null: false                      |
 | walk_time          | string           |                                  |
-| trimming           | string           |                                  |
 | character          | text             |                                  |
 | type_of_foods      | string           |                                  |
 | number_of_meals    | string           |                                  |
