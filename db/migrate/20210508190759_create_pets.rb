@@ -3,9 +3,9 @@ class CreatePets < ActiveRecord::Migration[6.0]
     create_table :pets do |t|
       t.string :name,               null: false
       t.string :sex,                null: false
-      t.string :type,               null: false
+      t.text :type_of_pet,          null: false
       t.date :birthday,             null: false
-      t.string :color,              null: false
+      t.text :color,                null: false
       t.text :hospital,             null: false
       t.text :medical_history,      null: false
       t.text :medicine,             null: false

@@ -1,0 +1,80 @@
+<%= form_with model: pet, local: true do |f|%>
+  <div class="field">
+    <%= f.label :name, "お名前" %><br />
+    <%= f.text_field :name, id:"pet_name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sex, "性別" %><br />
+    <%= f.text_field :sex, id:"pet_sex" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type_of_pet, "種類" %><br />
+    <%= f.text_field :type_of_pet, id:"pet_type_of_pet" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :birthday, "お誕生日" %><br />
+    <%= f.text_field :birthday, id:"pet_birthday" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :color, "色" %><br />
+    <%= f.text_field :color, id:"pet_color" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hospital, "かかりつけの病院" %><br />
+    <%= f.text_area :hospital, id:"pet_hospital" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :medical_history, "病歴" %><br />
+    <%= f.text_area :medical_history, id:"pet_medical_history" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :medicine, "服用中のお薬" %><br />
+    <%= f.text_area :medicine, id:"pet_medicine" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :allergies, "アレルギー" %><br />
+    <%= f.text_area :allergies, id:"pet_allergies" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :walk_time, "お散歩時間" %><br />
+    <%= f.text_field :walk_time, id:"pet_walk_time" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :character, "ペットの性格" %><br />
+    <%= f.text_area :character, id:"pet_character" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type_of_foods, "ご飯の種類" %><br />
+    <%= f.text_field :type_of_foods, id:"pet_type_of_foods" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number_of_meals, "１日のご飯の回数" %><br />
+    <%= f.text_field :number_of_meals, id:"pet_number_of_meals" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount_of_food, "一回のご飯の量" %><br />
+    <%= f.text_field :amount_of_food, id:"pet_amount_of_food" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "ペットのプロフィール写真" %><br />
+    <%= f.file_field :image, id:"pet_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
