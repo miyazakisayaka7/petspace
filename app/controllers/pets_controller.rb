@@ -20,7 +20,27 @@ class PetsController < ApplicationController
     @pet =Pet.find(params[:id])
   end
 
+  def edit
+    @pet = Pet.find(params[:id])
+    unless user_signed_in?
+      redirect_to action: :index
+    end
+  end
 
+  def update
+    @pet = Pet.find(params[:id])
+    if @pet.update(pet_params)
+      redirect_to root_path
+    else render :edit
+    end
+  end
+
+  def destroy
+    pet = Pet.find(params[:id])
+    if pet.destroy
+    redirect_to root_path
+    end
+  end
 
   private
   def pet_params

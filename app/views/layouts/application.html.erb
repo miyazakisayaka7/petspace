@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Petspace</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProtoSpace</title>
+    <title>PetSpace</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -22,7 +21,7 @@
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, class: :nav__logout, method: :delete %>
-              <%= link_to "New Proto", new_pet_path, class: :nav__btn %>
+              <%= link_to "Petを追加する", new_pet_path, class: :nav__btn %>
              </div>
           <% else %>
             <div class="nav__right">
@@ -35,7 +34,7 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+      <p class="copyright">Copyright © Sweeties All rights reserved.</p>
     </footer>
   </body>
 </html>

@@ -13,11 +13,12 @@ p,
 div {
   margin: 0;
   padding: 0;
+  font-family: 'Andale Mono',sans-serif;
 }
 
 body {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
   color: #3b4043;
+  background-color: rgb(254, 236, 217);
 }
 
 li {
@@ -35,21 +36,25 @@ a {
 }
 
 /* ヘッダー */
-
+.main{
+  background-color:#f7f7ee;
+  margin-bottom: 40px;
+}
 .header {
-  background-color: #f1f8fe;
-  margin-bottom: 48px;
+  background-color: rgb(133, 150, 149);
+  margin-bottom: 38px;
   padding: 20px 0;
 
 }
 .inner {
-  width: 1024px;
+  width: 900px;
   margin: 0 auto;
 }
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 }
 .logo {
   width: 200px;
@@ -58,23 +63,23 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #ffffff solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #ffffff;
 }
 
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   user-select: none;
 }
@@ -85,6 +90,7 @@ a {
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
+  padding-left: 300px;
 }
 
 .form__text {
@@ -106,8 +112,8 @@ a {
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background: #87CEFA;
-  border: 1px #87CEFA solid;
+  background: #c2c5c4;
+  border: 1px #ffffff solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
@@ -119,36 +125,41 @@ a {
 }
 
 /* メイン */
-
 .greeting{
-  margin-bottom: 20px;
+  margin: 20px 20px 20px 20px;
+  padding-left: 50px;
 }
 .greeting__link{
-  text-decoration: underline;
+ font-size: 20px;
 }
 .page-heading {
-  font-size: 30px;
-  margin-bottom: 28px;
+  font-size: 25px;
+  padding: 20px 0 0 0 ;
 }
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  min-height: calc(100vh - 161px);
+  min-height: calc(100vh - 200px);
+  padding: 60px;
+  background-color: rgb(238, 195, 181);
 }
+
 .card {
   width: calc((100% - 50px) / 3);
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 .card__img {
   margin-bottom: 16px;
+  border: 5px #ffffff solid;
 }
 .card__title {
   display: block;
   font-size: 20px;
-  margin-bottom: 8px;
-  font-weight: bold;
+  margin-bottom: 0px;
+  color: white;
+  text-align: center;
 }
 .card__summary {
   font-size: 16px;
@@ -162,13 +173,80 @@ a {
 }
 
 /* 詳細ページ */
+.pet--profile{
+  border: solid;
+  border-color: rgb(224, 223, 218);
+  color:teal;
+  text-align: center;
+}
+
+.title{
+  display: flex;
+  justify-content: space-between;
+}
+.pet--health{
+  border: solid;
+  border-color: rgb(224, 223, 218);
+  color:teal;
+  text-align: center;
+}
+
+.pet--care{
+  border: solid;
+  border-color: rgb(224, 223, 218);
+  color:teal;
+  text-align: center;
+}
+.pet--memo{
+    border: solid;
+    border-color: rgb(224, 223, 218);
+    color:teal;
+    text-align: center;
+  }
+
+.pet-profile{
+  border: double;
+  border-color: rgb(224, 223, 218);
+  border-radius: 2px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.pet-health{
+  border: double;
+  border-color: rgb(224, 223, 218);
+  border-radius: 2px;
+  margin-top: 20px;
+  padding:20px;
+  background-color: rgb(255, 255, 255);;
+}
+.pet-care{
+  border: double;
+  border-color: rgb(224, 223, 218);
+  border-radius: 2px;
+  margin-top: 20px;
+  padding:20px;
+  background-color: rgb(255, 255, 255);;
+}
+.pet-memo{
+  border: double;
+  border-color: rgb(224, 223, 218);
+  border-radius: 2px;
+  margin-top: 20px;
+  padding:20px;
+  background-color: rgb(255, 255, 255);;
+}
 .pet__wrapper{
   min-height: calc(100vh - 161px);
+  background-color: rgb(238, 195, 181);
+  padding-top: 30px;
 }
 .pet__hedding{
   font-size: 24px;
-  font-weight: bold;
+  padding-top: 30px;
   text-align: center;
+  color:rgb(78, 82, 81);
 }
 .pet__user{
   display: block;
@@ -181,16 +259,20 @@ a {
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
+  color: #999;
 }
 .pet__detail{
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color:rgb(122, 120, 120);
 }
 .detail__title{
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
+  color: #999;
+  
 }
 .pet__manage{
   display: flex;
@@ -201,7 +283,7 @@ a {
   display: block;
   padding: 0.4em 1.6em;
   font-size: 0.4em;
-  color: #999;
+  color: rgb(122, 120, 120);
   text-decoration: none;
   user-select: none;
   border: 1px #999 solid;
@@ -212,6 +294,11 @@ a {
 .pet__btn:hover{
   color: #fff;
   background: #999;
+}
+.pet__body{
+  display: flex;
+  justify-content: space-between;
+  padding:30px;
 }
 
 /* ユーザーページ */
@@ -248,8 +335,10 @@ a {
 /* フッター */
 
 .footer {
-  background-color: #999;
-  padding: 10px 0;
+  background-color: rgb(133, 150, 149);
+  padding: 15px 0;
+  margin-top: 30px;
+ 
 }
 .copyright {
   text-align: center;

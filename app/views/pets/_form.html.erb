@@ -1,46 +1,46 @@
 <%= form_with model: pet, local: true do |f|%>
   <div class="field">
-    <%= f.label :name, "お名前" %><br />
+    <%= f.label :name, "*お名前" %><br />
     <%= f.text_field :name, id:"pet_name" %>
   </div>
 
   <div class="field">
-    <%= f.label :sex, "性別" %><br />
+    <%= f.label :sex, "*性別" %><br />
     <%= f.text_field :sex, id:"pet_sex" %>
   </div>
 
   <div class="field">
-    <%= f.label :type_of_pet, "種類" %><br />
+    <%= f.label :type_of_pet, "*種類" %><br />
     <%= f.text_field :type_of_pet, id:"pet_type_of_pet" %>
   </div>
 
   <div class="field">
-    <%= f.label :birthday, "お誕生日" %><br />
+    <%= f.label :birthday, "*お誕生日" %><br />
     <%= f.text_field :birthday, id:"pet_birthday" %>
   </div>
 
   <div class="field">
-    <%= f.label :color, "色" %><br />
+    <%= f.label :color, "*色" %><br />
     <%= f.text_field :color, id:"pet_color" %>
   </div>
 
   <div class="field">
-    <%= f.label :hospital, "かかりつけの病院" %><br />
+    <%= f.label :hospital, "*かかりつけの病院" %><br />
     <%= f.text_area :hospital, id:"pet_hospital" %>
   </div>
 
   <div class="field">
-    <%= f.label :medical_history, "病歴" %><br />
+    <%= f.label :medical_history, "*病歴" %><br />
     <%= f.text_area :medical_history, id:"pet_medical_history" %>
   </div>
 
   <div class="field">
-    <%= f.label :medicine, "服用中のお薬" %><br />
+    <%= f.label :medicine, "*服用中のお薬" %><br />
     <%= f.text_area :medicine, id:"pet_medicine" %>
   </div>
 
   <div class="field">
-    <%= f.label :allergies, "アレルギー" %><br />
+    <%= f.label :allergies, "*アレルギー" %><br />
     <%= f.text_area :allergies, id:"pet_allergies" %>
   </div>
 
@@ -75,7 +75,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :image, "ペットのプロフィール写真" %><br />
+    <%= f.label :image, "*ペットのプロフィール写真" %><br />
     <%= f.file_field :image, id:"pet_image" %>
   </div>
 
