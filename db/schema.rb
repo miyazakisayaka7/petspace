@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2021_05_08_193626) do
     t.string "type_of_foods"
     t.string "number_of_meals"
     t.string "amount_of_food"
+    t.text "memo"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

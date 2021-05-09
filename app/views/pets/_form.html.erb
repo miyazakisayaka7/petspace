@@ -70,6 +70,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :memo, "Memo" %><br />
+    <%= f.text_area :memo, id:"pet_memo" %>
+  </div>
+
+  <div class="field">
     <%= f.label :image, "ペットのプロフィール写真" %><br />
     <%= f.file_field :image, id:"pet_image" %>
   </div>

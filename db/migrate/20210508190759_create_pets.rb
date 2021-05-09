@@ -15,6 +15,7 @@ class CreatePets < ActiveRecord::Migration[6.0]
       t.string :type_of_foods
       t.string :number_of_meals
       t.string :amount_of_food
+      t.text :memo
       t.references :user,           foreign_key: true
       t.timestamps
     end

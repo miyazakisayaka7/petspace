@@ -2,25 +2,20 @@
   <div class="inner">
     <div class="pet__wrapper">
       <p class="pet__hedding">
-        <%= @pet.name %>
+        <%=@pet.name %>
       </p>
-      <%= link_to "by #{@pet.user.name}", root_path, class: :pet__user %>
+      
       <% if user_signed_in? && current_user.id == @pet.user_id %>
-        <div class="prototype__manage">
+        <div class="pet__manage">
           <%= link_to "編集する", root_path, class: :pet__btn %>
           <%= link_to "削除する", root_path, class: :pet__btn %>
         </div>
       <% end %>
+
       <div class="pet__image">
         <%= image_tag @pet.image %>
       </div>
       <div class="pet__body">
-        <div class="pet__detail">
-          <p class="detail__title">性別</p>
-          <p class="detail__message">
-            <%= @pet.sex %>
-          </p>
-        </div>
         <div class="pet__detail">
           <p class="detail__title">種類</p>
           <p class="detail__message">
@@ -28,15 +23,21 @@
           </p>
         </div>
         <div class="pet__detail">
-          <p class="detail__title">お誕生日</p>
+          <p class="detail__title">性別</p>
           <p class="detail__message">
-            <%= @pet.birthday %>
+            <%= @pet.sex %>
           </p>
         </div>
         <div class="pet__detail">
           <p class="detail__title">色</p>
           <p class="detail__message">
             <%= @pet.color %>
+          </p>
+        </div>
+        <div class="pet__detail">
+          <p class="detail__title">お誕生日</p>
+          <p class="detail__message">
+            <%= @pet.birthday %>
           </p>
         </div>
         <div class="pet__detail">
@@ -64,21 +65,21 @@
           </p>
         </div>
         <div class="pet__detail">
+          <p class="detail__title">性格</p>
+          <p class="detail__message">
+            <%= @pet.character %>
+          </p>
+        </div>
+        <div class="pet__detail">
           <p class="detail__title">お散歩時間</p>
           <p class="detail__message">
             <%= @pet.walk_time %>
           </p>
         </div>
         <div class="pet__detail">
-          <p class="detail__title">ペットの性格</p>
-          <p class="detail__message">
-            <%= @pet.character %>
-          </p>
-        </div>
-        <div class="pet__detail">
           <p class="detail__title">ご飯の種類</p>
           <p class="detail__message">
-            <%= @pet.type_of_foods %>
+            <%= @pet.type_of_pet %>
           </p>
         </div>
         <div class="pet__detail">
@@ -88,9 +89,15 @@
           </p>
         </div>
         <div class="pet__detail">
-          <p class="detail__title">一回のご飯の量</p>
+          <p class="detail__title">１日のご飯の量</p>
           <p class="detail__message">
             <%= @pet.amount_of_food %>
+          </p>
+        </div>
+        <div class="pet__detail">
+          <p class="detail__title">Memo</p>
+          <p class="detail__message">
+            <%= @pet.memo %>
           </p>
         </div>
       </div>
