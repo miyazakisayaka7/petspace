@@ -13,7 +13,7 @@ class DiariesController < ApplicationController
   end
 
   def index
-    @diaries = Diaries.all
+    @diary = Diary.all
   end
 
   private

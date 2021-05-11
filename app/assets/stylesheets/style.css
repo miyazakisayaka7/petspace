@@ -18,7 +18,7 @@ div {
 
 body {
   color: #3b4043;
-  background-color: white;
+  background-color: rgb(254, 236, 217);
 }
 
 li {
@@ -37,19 +37,13 @@ a {
 
 /* ヘッダー */
 .main{
-  background-color:#f7f7ee;
+  background-color:rgb(254, 236, 217);
 }
 .header {
   background-color: rgb(133, 150, 149);
   margin-bottom: 30px;
   padding: 20px 0;
 
-}
-.inner-head{
-  width: 900px;
-  margin: 0 auto;
-  height: 100px;
-  background-color: rgb(254, 236, 217);
 }
 .inner {
   width: 900px;
@@ -191,7 +185,13 @@ a {
   text-align: right;
   text-decoration: underline;
 }
-
+.diary__wrapper-diary{
+  display: flex;
+  
+}
+.card__diary{
+  border-color: white;
+}
 /* 詳細ページ */
 .pet--profile{
   border: solid;

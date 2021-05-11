@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_10_074432) do
+ActiveRecord::Schema.define(version: 2021_05_10_152051) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -42,22 +42,17 @@ ActiveRecord::Schema.define(version: 2021_05_10_074432) do
     t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
+  create_table "grows", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "height", null: false
+    t.string "weight", null: false
+    t.bigint "pet_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["pet_id"], name: "index_grows_on_pet_id"
+  end
+
   create_table "pets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "sex", null: false
-    t.text "type_of_pet", null: false
-    t.date "birthday", null: false
-    t.text "color", null: false
-    t.text "hospital", null: false
-    t.text "medical_history", null: false
-    t.text "medicine", null: false
-    t.text "allergies", null: false
-    t.string "walk_time"
-    t.text "character"
-    t.string "type_of_foods"
-    t.string "number_of_meals"
-    t.string "amount_of_food"
-    t.text "memo"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -79,5 +74,6 @@ ActiveRecord::Schema.define(version: 2021_05_10_074432) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "diaries", "users"
+  add_foreign_key "grows", "pets"
   add_foreign_key "pets", "users"
 end
