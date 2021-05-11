@@ -4,7 +4,6 @@
       <p class="pet__hedding">
         <%= @pet.name %>
       </p>
-      <%= link_to "by #{@pet.user.name}", root_path, class: :pet__user %>
       <% if user_signed_in? && current_user.id == @pet.user_id %>
         <div class="prototype__manage">
           <%= link_to "編集する", root_path, class: :pet__btn %>
