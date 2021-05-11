@@ -1,97 +1,138 @@
 <main class="main">
   <div class="inner">
     <div class="pet__wrapper">
+     
+      <div class="pet__image">
+        <%= image_tag @pet.image %>
+      </div>
       <p class="pet__hedding">
         <%= @pet.name %>
       </p>
-      <% if user_signed_in? && current_user.id == @pet.user_id %>
-        <div class="prototype__manage">
+       <% if user_signed_in? && current_user.id == @pet.user_id %>
+        <div class="pet__manage">
           <%= link_to "編集する", root_path, class: :pet__btn %>
           <%= link_to "削除する", root_path, class: :pet__btn %>
         </div>
       <% end %>
-      <div class="pet__image">
-        <%= image_tag @pet.image %>
-      </div>
+
       <div class="pet__body">
-        <div class="pet__detail">
-          <p class="detail__title">性別</p>
-          <p class="detail__message">
-            <%= @pet.sex %>
-          </p>
+
+        <div class="pet-profile">
+        <div class="pet--profile">
+          Profile
         </div>
-        <div class="pet__detail">
-          <p class="detail__title">種類</p>
-          <p class="detail__message">
-            <%= @pet.type_of_pet %>
-          </p>
+          <div class="pet__detail">
+            <p class="detail__title">性別</p>
+            <p class="detail__message">
+              <%= @pet.sex %>
+            </p>
+          </div>
+
+          <div class="pet__detail">
+            <p class="detail__title">種類</p>
+            <p class="detail__message">
+              <%= @pet.type_of_pet %>
+            </p>
+          </div>
+
+          <div class="pet__detail">
+            <p class="detail__title">お誕生日</p>
+            <p class="detail__message">
+              <%= @pet.birthday %>
+            </p>
+          </div>
+
+          <div class="pet__detail">
+            <p class="detail__title">色</p>
+            <p class="detail__message">
+              <%= @pet.color %>
+            </p>
+          </div>
         </div>
-        <div class="pet__detail">
-          <p class="detail__title">お誕生日</p>
-          <p class="detail__message">
-            <%= @pet.birthday %>
-          </p>
+
+        <div class="pet-health">
+          <div class="pet--health">
+            Health
+          </div>
+          <div class="pet__detail">
+            <p class="detail__title">かかりつけの病院</p>
+            <p class="detail__message">
+              <%= @pet.hospital %>
+            </p>
+          </div>
+
+          <div class="pet__detail">
+            <p class="detail__title">病歴</p>
+            <p class="detail__message">
+              <%= @pet.medical_history %>
+            </p>
+          </div>
+          
+          <div class="pet__detail">
+            <p class="detail__title">服用中のお薬</p>
+            <p class="detail__message">
+              <%= @pet.medicine %>
+            </p>
+          </div>
+
+          <div class="pet__detail">
+            <p class="detail__title">アレルギー</p>
+            <p class="detail__message">
+              <%= @pet.allergies %>
+            </p>
+          </div>
         </div>
-        <div class="pet__detail">
-          <p class="detail__title">色</p>
-          <p class="detail__message">
-            <%= @pet.color %>
-          </p>
+      
+        <div class="pet-care">
+          <div class="pet--care">
+            Care
+          </div>
+          <div class="pet__detail">
+            <p class="detail__title">お散歩時間</p>
+            <p class="detail__message">
+              <%= @pet.walk_time %>
+            </p>
+          </div>
+          
+          <div class="pet__detail">
+            <p class="detail__title">ペットの性格</p>
+            <p class="detail__message">
+              <%= @pet.character %>
+            </p>
+          </div>
+          <div class="pet__detail">
+            <p class="detail__title">ご飯の種類</p>
+            <p class="detail__message">
+              <%= @pet.type_of_foods %>
+            </p>
+          </div>
+          <div class="pet__detail">
+            <p class="detail__title">１日のご飯の回数</p>
+            <p class="detail__message">
+              <%= @pet.number_of_meals %>
+            </p>
+          </div>
+          <div class="pet__detail">
+            <p class="detail__title">一回のご飯の量</p>
+            <p class="detail__message">
+              <%= @pet.amount_of_food %>
+            </p>
+          </div>
         </div>
-        <div class="pet__detail">
-          <p class="detail__title">かかりつけの病院</p>
-          <p class="detail__message">
-            <%= @pet.hospital %>
-          </p>
+
+        <div class="pet-memo">
+          <div class="pet--memo">
+            Memo
+          </div>
+          <div class="pet__detail">
+            <p class="detail__title"></p>
+            <p class="detail__message">
+              <%= @pet.memo %>
+            </p>
+          </div>
+
         </div>
-        <div class="pet__detail">
-          <p class="detail__title">病歴</p>
-          <p class="detail__message">
-            <%= @pet.medical_history %>
-          </p>
-        </div>
-        <div class="pet__detail">
-          <p class="detail__title">服用中のお薬</p>
-          <p class="detail__message">
-            <%= @pet.medicine %>
-          </p>
-        </div>
-        <div class="pet__detail">
-          <p class="detail__title">アレルギー</p>
-          <p class="detail__message">
-            <%= @pet.allergies %>
-          </p>
-        </div>
-        <div class="pet__detail">
-          <p class="detail__title">お散歩時間</p>
-          <p class="detail__message">
-            <%= @pet.walk_time %>
-          </p>
-        </div>
-        <div class="pet__detail">
-          <p class="detail__title">ペットの性格</p>
-          <p class="detail__message">
-            <%= @pet.character %>
-          </p>
-        </div>
-        <div class="pet__detail">
-          <p class="detail__title">ご飯の種類</p>
-          <p class="detail__message">
-            <%= @pet.type_of_foods %>
-          </p>
-        </div>
-        <div class="pet__detail">
-          <p class="detail__title">１日のご飯の回数</p>
-          <p class="detail__message">
-            <%= @pet.number_of_meals %>
-          </p>
-        </div>
-        <div class="pet__detail">
-          <p class="detail__title">一回のご飯の量</p>
-          <p class="detail__message">
-            <%= @pet.amount_of_food %>
-          </p>
-        </div>
+
       </div>
     </div>
   </div>

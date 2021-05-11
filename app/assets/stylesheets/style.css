@@ -249,20 +249,13 @@ a {
   padding:20px;
   background-color: rgb(255, 255, 255);
 }
-.pet-grow{
+
+.pet-memo{
   border: double;
   border-color: rgb(224, 223, 218);
   border-radius: 2px;
   margin-top: 20px;
-  padding:20px;
-  background-color: rgb(255, 255, 255);
-}
-.pet-diary{
-  border: double;
-  border-color: rgb(224, 223, 218);
-  border-radius: 2px;
-  margin-top: 20px;
-  padding:20px;
+  padding: 20px;
   background-color: rgb(255, 255, 255);
 }
 
@@ -273,7 +266,7 @@ a {
 }
 .pet__hedding{
   font-size: 24px;
-  padding-top: 30px;
+  
   text-align: center;
   color:rgb(78, 82, 81);
 }
@@ -317,6 +310,7 @@ a {
   color: rgb(122, 120, 120);
   text-decoration: none;
   user-select: none;
+  border: 1px #999 solid;
   border-radius: 3px;
   transition: 0.4s ease;
   margin: 0 4px;
@@ -328,7 +322,7 @@ a {
 .pet__body{
   display: flex;
   justify-content: space-between;
-  padding:30px;
+  padding: 0 30px 30px 30px;
 }
 
 /* ユーザーページ */
