@@ -1,2 +1,0 @@
-class GrowsController < ApplicationController
-end
