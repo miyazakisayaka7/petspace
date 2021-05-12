@@ -9,7 +9,6 @@
       <%= diary.text %>
   </div>
 </div>
-  <% if user_signed_in? && current_user.id == diary.user_id %>
         <div class="diary__manage">
           <div class="diary_edit">
             <%= link_to "編集", edit_diary_path(diary.id) %>
@@ -18,6 +17,5 @@
             <%= link_to "削除",diary_path(diary.id), method: :delete %>
           </div>
         </div>
-      <% end %>
 </div>
 <div class="p"></div>

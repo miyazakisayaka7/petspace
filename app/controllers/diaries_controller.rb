@@ -14,6 +14,7 @@ class DiariesController < ApplicationController
 
   def index
     @diary = Diary.all
+    @diary = Diary.order("created_at DESC")
   end
 
   def edit
