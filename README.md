@@ -6,7 +6,7 @@ My sweeties
 * 日記投稿機能
 
 # URL
-
+https://rurukota.herokuapp.com/
 
 # テスト用アカウント
 * アドレス: a@a
