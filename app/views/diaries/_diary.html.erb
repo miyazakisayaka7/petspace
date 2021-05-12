@@ -1,7 +1,23 @@
-<div class="card">
-  <%= link_to image_tag(diary.image, class: :card__img )%>
-  <div class="card__diary">
-    <%= diary.date %>
-    <%= diary.text %>
+<div class="p"></div>
+<div class="diary-cards">
+  <%= link_to image_tag(diary.image, class: :diarycard__img )%>
+  <div class="card-detail">
+    <div class="card__date">
+      <%= diary.date %>
+    </div>
+    <div class="text">
+      <%= diary.text %>
   </div>
 </div>
+  <% if user_signed_in? && current_user.id == diary.user_id %>
+        <div class="diary__manage">
+          <div class="diary_edit">
+            <%= link_to "編集", edit_diary_path(diary.id) %>
+          </div>
+          <div class="diary_delete">
+            <%= link_to "削除",diary_path(diary.id), method: :delete %>
+          </div>
+        </div>
+      <% end %>
+</div>
+<div class="p"></div>

@@ -1,9 +1,7 @@
-<div class="main">
-  <div class="inner">
-    <div class="form__wrapper">
-      <h2 class="page-heading">ペットの情報</h2>
-      <h5 class="page-notice">*のついた箇所は記入必須です</h5>
-        <%= render partial: "form", locals: { pet: @pet } %>
-    </div>
+<div class="form-main">
+  <div class="form__wrapper">
+    <h2 class="form-heading">ペットの情報</h2>
+      <h5 class="form-notice">*のついた箇所は記入必須です</h5>
+    <%= render partial: "form", locals: { pet: @pet } %>
   </div>
 </div>

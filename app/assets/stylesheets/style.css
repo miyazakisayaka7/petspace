@@ -13,12 +13,13 @@ p,
 div {
   margin: 0;
   padding: 0;
-  font-family: 'Andale Mono',sans-serif;
+  font-family: 'Hiragino Kaku Gothic PnoN',sans-serif;
 }
 
 body {
   color: #3b4043;
   background-color: rgb(254, 236, 217);
+  width: 100vw;
 }
 
 li {
@@ -28,32 +29,117 @@ li {
 img {
   max-width: 100%;
   vertical-align: bottom;
+  padding:0 0 10px 0;
 }
+/* Diary関連 */
+
+.main-diary{
+  background-color: rgb(247, 240, 230);
+}
+.diary-card__img{
+  max-width:100%;
+}
+.diary-card__wrapper{
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+  padding: 0 200px;
+  background-color: rgb(238, 195, 181);
+  width: calc(100vw - 400px);
+  margin-left: 150px;
+  }
+.diary__manage{
+  display: flex;
+  justify-content: center;
+  }
+.diary_edit{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  user-select: none;
+  border: 2px #ffffff solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 4px;
+
+  }
+.diary_edit a {
+  color:rgb(108, 108, 112);
+  }
+.diary_delete{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  user-select: none;
+  border: 2px #ffffff solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 4px;
+  }
+
+.diary_delete a {
+  color:rgb(108, 108, 112);
+  }
+
+.diary-card{
+  width:30vw;
+  }
+.diary-cards{
+  width: 43vw;
+  background-color: burlywood;
+  padding:20px;
+  margin: 10px 30px 10px 0;
+ }
+.card-detail{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background-color: white;
+  border: 2px #e9e2c4 solid;
+  }
 
 a {
   text-decoration: none;
   color: #3b4043;
+  }
+  .card__diary{
+  border-color: white;
+  }
+.card__date{
+  color:rgb(129, 129, 126);
+  
+}
+.text{
+  height: auto;
+  color:rgb(129, 129, 126);
+  border-top: 2px #e9e2c4 solid;
 }
 
 /* ヘッダー */
 .main{
   background-color:rgb(254, 236, 217);
-}
+  }
 .header {
   background-color: rgb(133, 150, 149);
   margin-bottom: 30px;
   padding: 20px 0;
-
-}
+   
+  }
 .inner {
-  width: 900px;
-  margin: 0 auto;
-}
+  width: 100vh;
+  padding-left: 60px;
+  }
 .nav {
-  width: 100%;
+  width: 90vw;
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
+  margin: 0 0px;
 }
 .logo {
   width: 200px;
@@ -71,7 +157,7 @@ a {
 }
 .nav__btn:hover{
   color: #fff;
-  background: #ffffff;
+  background: #c2c2bf;
 }
 
 .nav__diary{
@@ -102,23 +188,35 @@ a {
 }
 
 /* フォーム周り */
+.form-inner{
+  width: 100vw;
+  margin: 100px;
+}
 .form__wrapper{
   min-height: calc(100vh - 161px);
-  padding-left: 300px;
+  padding-left: 500px;
+  
 }
-
+.page-heading{
+  color:rgb(119, 116, 114)
+}
 .form__text {
   width: 50%;
 }
-
+.form-heading{
+  color:rgb(119, 116, 114)
+}
 .field{
   margin: 10px 0;
+  color:rgb(97, 95, 93);
 }
 
 .actions{
   margin-bottom: 40px;
 }
-
+.form-notice{
+  color:rgb(97, 95, 93);
+}
 .form__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -153,20 +251,17 @@ a {
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   min-height: calc(100vh - 100px);
   padding: 10px;
   background-color: rgb(238, 195, 181);
+  width: calc(100vw - 400px);
+  margin-left: 150px;
 }
 
 .card {
   width: calc((100% - 50px) / 3);
-
-}
-.card__img {
-  margin-bottom: 16px;
-  border: 5px #ffffff solid;
 }
 .card__title {
   display: block;
@@ -185,90 +280,72 @@ a {
   text-align: right;
   text-decoration: underline;
 }
-.diary__wrapper-diary{
-  display: flex;
-  
-}
-.card__diary{
-  border-color: white;
-}
+
+
 /* 詳細ページ */
-.pet--profile{
-  border: solid;
-  border-color: rgb(224, 223, 218);
+.pet--tag{
+  background-color: rgb(190, 189, 182);
   color:teal;
   text-align: center;
+  height: 50px;
+  padding: 15px;
 }
 
 .title{
   display: flex;
   justify-content: space-between;
 }
-.pet--health{
-  border: solid;
-  border-color: rgb(224, 223, 218);
-  color:teal;
-  text-align: center;
+.pet--profile{
+  width: 100%;
 }
-
-.pet--care{
-  border: solid;
-  border-color: rgb(224, 223, 218);
-  color:teal;
-  text-align: center;
-}
-.pet--memo{
-    border: solid;
-    border-color: rgb(224, 223, 218);
-    color:teal;
-    text-align: center;
-  }
-
 .pet-profile{
-  border: double;
-  border-color: rgb(224, 223, 218);
   border-radius: 2px;
-  margin-top: 20px;
-  padding: 20px;
-  background-color: rgb(255, 255, 255);
+  margin: 20px 38vw;
+  padding:20px;
+  background-color: rgb(248, 247, 240);
 }
 
+.pet-image-card{
+  background-color: rgb(238, 195, 181);
+}
 .pet-health{
-  border: double;
-  border-color: rgb(224, 223, 218);
   border-radius: 2px;
-  margin-top: 20px;
+  margin: 20px 38vw;
   padding:20px;
   background-color: rgb(255, 255, 255);
 }
 .pet-care{
-  border: double;
-  border-color: rgb(224, 223, 218);
   border-radius: 2px;
-  margin-top: 20px;
+  margin: 20px 38vw;
   padding:20px;
   background-color: rgb(255, 255, 255);
 }
 
 .pet-memo{
-  border: double;
-  border-color: rgb(224, 223, 218);
   border-radius: 2px;
-  margin-top: 20px;
+  margin: 20px 38vw;
   padding: 20px;
   background-color: rgb(255, 255, 255);
 }
 
 .pet__wrapper{
-  min-height: calc(100vh - 161px);
-  background-color: rgb(238, 195, 181);
+  height: 100px;
   padding-top: 30px;
 }
-.pet__hedding{
-  font-size: 24px;
+
+.pet_wrapper{
+  height: 100px;
   
+}
+.pet--wrapper{
+  background-color: rgb(238, 195, 181);
+}
+
+.pet__heading{
+  font-size: 25px;
   text-align: center;
   color:rgb(78, 82, 81);
+  padding: 20px;
 }
 .pet__user{
   display: block;
@@ -279,10 +356,10 @@ a {
 }
 .pet__image{
   width: 40%;
-  margin: 0 auto;
-  padding: 16px 0;
-  color: #999;
+  margin: 10px auto;
+  padding-top: 30px; 
 }
+
 .pet__detail{
   display: flex;
   align-items: center;
@@ -303,26 +380,33 @@ a {
   justify-content: center;
   padding-top: 16px;
 }
-.pet__btn{
-  display: block;
-  padding: 0.4em 1.6em;
-  font-size: 0.4em;
-  color: rgb(122, 120, 120);
-  text-decoration: none;
-  user-select: none;
-  border: 1px #999 solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-  margin: 0 4px;
-}
-.pet__btn:hover{
-  color: #fff;
-  background: #999;
-}
+
 .pet__body{
-  display: flex;
   justify-content: space-between;
-  padding: 0 30px 30px 30px;
+  padding: 0 30px 30px 180px;
+}
+.pet___body{
+  display: flex;
+}
+.pet__btn{
+  padding: 0 100px;
+  width: calc(100vw - 500px);
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(238, 195, 181);
+  margin: 0 250px;
+}
+
+.pet___btn{
+  color: white;
+  padding: 15px;
+  width: 7vw;
+  background-color:  rgb(255, 255, 255);
+  text-align: center;
+  margin: 15px 0;
+}
+.p{
+  height: 30px;
 }
 
 /* ユーザーページ */
@@ -362,6 +446,7 @@ a {
   background-color: rgb(133, 150, 149);
   padding: 15px 0;
   margin-top: 30px;
+  
  
 }
 .copyright {
@@ -369,6 +454,7 @@ a {
   color: #fff;
   font-size: 10px;
 }
+
 
 /* タブレット対応 */
 @media (max-width: 1024px) {

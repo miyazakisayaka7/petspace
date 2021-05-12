@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 ## User テーブル
 
 |  Column            |  Type               |  Options          |
@@ -19,8 +27,6 @@
 ### Association
 - belongs_to :user
 - belongs_to :profile
-- belongs_to :health
-- belongs_to :care
 - belongs_to :diary
 - belongs_to :grow
 
@@ -34,7 +40,6 @@
 
 ### Association
 - belongs_to :user
-- belongs_to :pet
 
 ## Grow テーブル
 
@@ -42,6 +47,7 @@
 | ------------------ | ------------------- | ------------------ |
 | height             | string              | null: false        |
 | weight             | string              | null: false        |
+
 ### Association
 - belongs_to :pet
 
@@ -54,25 +60,10 @@
 | birthday           | date             | null: false           |
 | color              | string           | null: false           |
 | memo               | text             |                       |
-
-### Association
-- belongs_to :pet
-
-
-## Health テーブル
-|  Column            |  Type            |  Options              |
-| ------------------ | ---------------- | --------------------- |
 | hospital           | text             | null: false           |
 | medical_history    | text             | null: false           |
 | medicine           | text             | null: false           |
 | allergies          | text             | null: false           |
-
-### Association
-- belongs_to :pet
-
-## Care テーブル
-|  Column            |  Type            |  Options              |
-| ------------------ | ---------------- | --------------------- |
 | walk_time          | string           |                       |
 | character          | text             |                       |
 | type_of_foods      | string           |                       |

@@ -1,0 +1,16 @@
+  <%= form_with model: grow, local: true do |f|%>
+    
+    <div class="field">
+      <%= f.label :height, "身長" %><br />
+      <%= f.text_field :height, id:"grow-text" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :grow, "体重" %><br />
+      <%= f.text_field :grow, id:"grow-text" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "保存する", class: :form__btn  %>
+    </div>
+  <% end %>

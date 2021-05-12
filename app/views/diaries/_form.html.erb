@@ -1,29 +1,19 @@
-  <%= form_with model: diary, url: diaries_path, local: true do |f|%>
-  <div class="field">
-    <%= raw sprintf(
-          f.date_select(
-          :date,
-          class:'select-date',
-          id:"diary-date",
-          use_month_numbers: true,
-          prompt:'--',
-          start_year: 2021,
-          end_year: (Time.now.year - 5),
-          date_separator: '%s'),
-          "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
-  </div>
+  <%= form_with model: diary, local: true do |f|%>
+    <div class="field">
+      <%= f.date_field :date, class:"field" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :text, "日記" %><br />
-    <%= f.text_area :text, id:"diary-text" %>
-  </div>
+    <div class="field">
+      <%= f.label :text, "*テキスト(130字以内)" %><br />
+      <%= f.text_area :text, id:"diary-text" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :image, "写真" %><br />
-    <%= f.file_field :image, id:"diary-image" %>
-  </div>
+    <div class="field">
+      <%= f.label :image, "*写真" %><br />
+      <%= f.file_field :image, id:"diary-image" %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
-  </div>
-<% end %>
+    <div class="actions">
+      <%= f.submit "保存する", class: :form__btn  %>
+    </div>
+  <% end %>

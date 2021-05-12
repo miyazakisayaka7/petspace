@@ -1,0 +1,13 @@
+<div class='col-md-8'>
+      <div class='card-body'>
+        <h5 class='card-title'>[Current_Profile]</h5>
+          <p>身長: <%= @grow.height  %></p>
+            <%= link_to '体重を入力してください','grows/new' %>
+      </div>
+    </div>
+  </div>
+
+<div class = 'box'>
+  <a class='btn-floating halfway-fab waves-effect waves-light red', href='profiles/<%= @grow.id %>/grows/new' ><i class='material-icons'>+</i></a>
+</div>
+<%= line_chart Weight.group_by_day(:updated_at).average(:weight), messages: {empty: 'No data'} %>
