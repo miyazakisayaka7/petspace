@@ -273,6 +273,7 @@ a {
 .card {
   width: calc((100% - 40px) / 3);
   margin-right: 40px;
+  padding:10px;
 }
 .card__title {
   display: block;
