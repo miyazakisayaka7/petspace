@@ -2,7 +2,7 @@
 My sweeties
 
 # アプリケーション概要
-* ぺっとのメモ機能
+* ペット情報のメモ機能
 * 日記投稿機能
 
 # URL
@@ -18,6 +18,12 @@ https://rurukota.herokuapp.com/
 # 目指した課題解決
 * 記憶だけでは忘れてしまうことも、写真とともに記録することでしっかりと思い出せる。忘れん坊さんの作った、忘れん坊さんのためのアプリケーションです。
 
+# 洗い出した要件定義
+* ユーザー登録機能 (ユーザーの情報管理、プライバシー管理)
+* 詳細表示機能 (フォームで入手するペット情報の詳細を一覧で表示させるため)
+* 投稿機能 (日記を投稿するため)
+* グラフ (入力した身長体重の推移を可視化するため)
+
 # 実装した機能についての画像やGIFおよびその説明
 * トップページ         https://gyazo.com/e1c01c3e80050763da3deb797974a7ba
 * 日記機能            https://gyazo.com/d115f4fb8921925785acff1148ecb1e1
@@ -31,9 +37,16 @@ https://rurukota.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/8fc1a4d21126d328ec72e67c24b87f03.png)](https://gyazo.com/8fc1a4d21126d328ec72e67c24b87f03)
 
 # ローカルでの保存方法
+% git clone https://github.com/miyazakisayaka7/petspace.git
 
-
-
+アプリケーション開発に使用した環境: 
+'rails','~> 6.0.0', 
+'mysql2', '>= 0.4.4'
+ruby '2.6.5'
+'devise'
+'mini_magick'
+'image_processing''~> 1.2'
+'pry-rails'
 
 
 
