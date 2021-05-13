@@ -28,13 +28,15 @@ li {
 .diary-card__img{
   height: 100vh;
   width:300vw;
-  
 }
-
+.card__imgs{
+  content: center;
+}
 img {
-  max-width: 100%;
+  max-width: 70%;
   vertical-align: bottom;
   padding:0 0 10px 0;
+  margin-left: 90px;
 }
 /* Diary関連 */
 
@@ -43,14 +45,15 @@ img {
 }
 .diary-card__img{
   max-width:100%;
+  padding: 50px;
 }
 .diary-card__wrapper{
-  flex-wrap: wrap;
+  flex-wrap:wrap;
   justify-content: space-around;
   align-items: center;
   min-height: calc(100vh - 100px);
   padding: 0 200px;
-  background-color: rgb(238, 195, 181);
+  background-color: rgb(235, 204, 162);
   width: calc(100vw - 400px);
   margin-left: 150px;
   }
@@ -101,11 +104,12 @@ img {
   margin: 10px 30px 10px 0;
  }
 .card-detail{
-  width: 100%;
+  width: 70%;
   height: 100px;
   text-align: center;
   background-color: white;
   border: 2px #e9e2c4 solid;
+  margin-left: 90px;
   }
 
 a {
@@ -203,13 +207,13 @@ a {
   
 }
 .page-heading{
-  color:rgb(119, 116, 114)
+  color:rgb(119, 116, 114);
 }
 .form__text {
   width: 50%;
 }
 .form-heading{
-  color:rgb(119, 116, 114)
+  color:rgb(119, 116, 114);
 }
 .field{
   margin: 10px 0;
@@ -261,17 +265,19 @@ a {
   min-height: calc(100vh - 100px);
   padding: 10px;
   background-color: rgb(238, 195, 181);
-  width: calc(100vw - 400px);
-  margin-left: 150px;
+  width:80vw ;
+  margin-left: 78px;
+  
 }
 
 .card {
-  width: calc((100% - 50px) / 3);
+  width: calc((100% - 40px) / 3);
+  margin-right: 40px;
 }
 .card__title {
   display: block;
   font-size: 20px;
-  margin-bottom: 0px;
+  margin-left: 50px;
   color: white;
   text-align: center;
 }
@@ -340,10 +346,10 @@ a {
 
 .pet_wrapper{
   height: 100px;
-  
+  background-color: rgb(251, 201, 108);
 }
 .pet--wrapper{
-  background-color: rgb(238, 195, 181);
+  background-color: rgb(251, 201, 108);
 }
 
 .pet__heading{
@@ -494,7 +500,7 @@ a {
   font-size: 14px;
 }
 .account-page .account-page__header a{
-  color: rgb(173, 166, 166);;
+  color: rgb(173, 166, 166);
 }
 .account-page .field {
   margin-bottom: 10px;
@@ -625,7 +631,7 @@ a {
   .card__summary {
     font-size: 14px;
   }
-  .prototype_image{
+  .pet_image{
     width: 100%;
   }
   .table{
